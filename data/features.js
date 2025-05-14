@@ -1,4 +1,4 @@
-import { BrainCircuit, Briefcase, LineChart, ScrollText } from "lucide-react";
+import { BrainCircuit, Briefcase, TrendingUp, ScrollText, FileText, Search } from "lucide-react"; // Assuming you're using Lucide for the others
 
 export const features = [
   {
@@ -14,7 +14,7 @@ export const features = [
       "Practice with role-specific questions and get instant feedback to improve your performance.",
   },
   {
-    icon: <LineChart className="w-10 h-10 mb-4 text-primary" />,
+    icon: <TrendingUp className="w-10 h-10 mb-4 text-primary" />, // Using TrendingUp from Lucide
     title: "Industry Insights",
     description:
       "Stay ahead with real-time industry trends, salary data, and market analysis.",
@@ -23,5 +23,15 @@ export const features = [
     icon: <ScrollText className="w-10 h-10 mb-4 text-primary" />,
     title: "Smart Resume Creation",
     description: "Generate ATS-optimized resumes with AI assistance.",
+  },
+  {
+    icon: <FileText className="w-10 h-10 mb-4 text-primary" />,
+    title: "Intelligent Cover Letter Creation",
+    description: "Craft compelling cover letters tailored to specific job applications with AI.",
+  },
+  {
+    icon: <Search className="w-10 h-10 mb-4 text-primary" />,
+    title: "Skill Gap Analysis",
+    description: "Identify your skill gaps and get recommendations for professional development.",
   },
 ];

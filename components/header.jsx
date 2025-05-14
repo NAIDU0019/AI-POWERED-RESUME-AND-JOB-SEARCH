@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./ui/button"; // Assuming you're importing Button from ShadCN UI
+import { Button } from "./ui/button";
 import {
   PenBox,
   LayoutDashboard,
@@ -7,7 +7,8 @@ import {
   GraduationCap,
   ChevronDown,
   StarsIcon,
-} from "lucide-react";
+  Brain,
+} from "lucide-react"; // Added Brain icon for Skill Gap
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import {
@@ -29,14 +30,13 @@ export default async function Header() {
         <div className="flex items-center space-x-2">
           <Link href="/">
             <Image
-              src={"/logo.png"}
+              src={"/logo.jpeg"}
               alt="RAB STUDIOS"
               width={200}
               height={60}
               className="h-12 py-1 w-auto object-contain"
             />
           </Link>
-          {/* ShadCN UI Button for Home */}
           <Link href="/">
             <Button variant="outline" className="text-sm font-medium">
               Home
@@ -69,7 +69,7 @@ export default async function Header() {
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
+              <DropdownMenuContent align="end" className="w-52">
                 <DropdownMenuItem asChild>
                   <Link href="/resume" className="flex items-center gap-2">
                     <FileText className="h-4 w-4" />
@@ -77,10 +77,7 @@ export default async function Header() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link
-                    href="/ai-cover-letter"
-                    className="flex items-center gap-2"
-                  >
+                  <Link href="/ai-cover-letter" className="flex items-center gap-2">
                     <PenBox className="h-4 w-4" />
                     Cover Letter
                   </Link>
@@ -91,6 +88,20 @@ export default async function Header() {
                     Interview Prep
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/skill-gap-analysis" className="flex items-center gap-2">
+                    <Brain className="h-4 w-4" />
+                    Skill Gap Analysis
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+  <Link href="/career-coach" className="flex items-center gap-2">
+    <Brain className="h-4 w-4" />
+    Career Coach
+  </Link>
+</DropdownMenuItem>
+
+                
               </DropdownMenuContent>
             </DropdownMenu>
           </SignedIn>
